@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Switch, Route, Redirect} from 'react-router-dom';
-import login from "./Pages/login";
+import {Switch, Route} from 'react-router-dom';
+import Login from "./Pages/Login";
+import Dashboard from './Pages/Dashboard';
+import Authenticated from './Components/Authenticated';
 
 
 function App() {
@@ -10,10 +12,16 @@ function App() {
    
       <Switch>
         <Route exact path="/">
-          DashBoard
-          {/* Send to dashboard */}
+          <Authenticated>
+            <Dashboard/>
+          </Authenticated>
         </Route>
-        <Route exact path="/login" component={login}/>
+        <Route exact path="/login">
+          <Authenticated>
+            <Authenticated nonAuthenticated={true}/>
+            <Login/>
+          </Authenticated>
+        </Route>
         <Route path="*" render={()=>"404 Not Found!"}/>
       </Switch>
     
