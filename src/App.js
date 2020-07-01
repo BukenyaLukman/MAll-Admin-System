@@ -11,9 +11,9 @@ function App() {
    
       <Switch>
         <Route exact path="/">
-          <Authenticated>
+          {/* <Authenticated> */}
             <Dashboard/>
-          </Authenticated>
+          {/* </Authenticated> */}
         </Route>
         <Route exact path="/login">
           <Authenticated>
@@ -21,7 +21,7 @@ function App() {
             <Login/>
           </Authenticated>
         </Route>
-        <Route path="*" render={()=>"404 Not Found!"}/>
+        <Route path="*" render={() => "404 Not Found!"} />
       </Switch>
     
   );

@@ -36,7 +36,7 @@ class Login extends Component {
         this.state.email_error = null;
         this.state.password_error = null;
 
-        if(this.state.email ===""){
+        if(this.state.email === ""){
             this.state.email_error = "Required!";
             valid_data=false
         }
@@ -154,4 +154,4 @@ class Login extends Component {
     }
 }
 
-export default Login
+export default Login;
