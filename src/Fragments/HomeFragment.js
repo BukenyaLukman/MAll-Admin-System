@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import  { Component } from 'react';
 import { Container, Avatar } from '@material-ui/core';
+import BannerSlider from '../Components/BannerSlider'
 
 
 
@@ -51,6 +52,7 @@ export class HomeFragment extends Component {
                   <Tab icon={<CategoryTab />}></Tab>
                 </Tabs>
               </AppBar>
+              <BannerSlider Images={[]}/>
               </Container>
         
           );
